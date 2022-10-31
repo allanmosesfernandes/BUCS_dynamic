@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BUCS Dynamic</title>
-</head>
-<body>
-  <h1>
-    BUCS Fixtures
-  </h1>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BUCS Dynamic</title>
+    <style>
+      .fixtures-container-bg {
+        background-color: #37003c;
+        background-image: url("./heading-bg-desktop.svg");
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        padding: 2rem 0 5.2rem;
+      }
+
+      .fixtures-container-bg h1 {
+        color: #ffffff !important;
+      }
+
+      .fixtures-list-container {
+
+      }
+
+      .fixtures-block {
+        border-bottom: 1px solid #efefef;
+      }
+      @media (max-width: 430px) {
+        .fixtures-container-bg {
+          background-image: url("./heading-bg-mobile.svg");
+          padding: 1rem 0 2.2rem;
+        }
+
+}
+    </style>
+  </head>
+  <body>
+    <div class="fixtures-container-bg">
+      <h1>Fixtures</h1>
+    </div>
+    <div class="fixtures-list-container" id="1">
+      <div class="fixtures-block">
+        <div class="team-1">
+          <span>NTU Team</span>
+        </div>
+        <div class="time-block">
+          12:30
+        </div>
+        <div class="team-2">
+          Leicester Women's 1
+        </div>
+      </div>
+      <div class="fixture-location">
+
+      </div>
+    </div>
+
+
+
+<script src='https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js'></script>
+
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
