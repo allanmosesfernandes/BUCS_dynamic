@@ -1,54 +1,48 @@
-import myJSON from './csvjson.json' assert {type: 'json'};
+/* 
+  API URL
+  Update this every week with new fixtures!
+*/
 
-const sportJSON = myJSON;
+const API_URL = "https://api.npoint.io/bc128648bc9d512ac3c2";
 
-//creates a sub-array of each unique sport
-    let fixturesUnique = sportJSON.reduce(function (r, a) {
-        r[a.Sport] = r[a.Sport] || [];
-        r[a.Sport].push(a);
-        return r;
-    }, Object.create(null));
+/* 
+  Define asyn function for fetching API Data
+*/
 
-//Add these suckers to the DOM
+async function getApiData(url) {
+  const apiResponse = await fetch(url);
+/*   
+  Storing JSON data 
+*/
+  var data = await apiResponse.json();
+  displayHTML(data);
+}
 
-// console.log(fixturesUnique)
-// for (const key in fixturesUnique) {
+getApiData(API_URL);//calling the async function
 
-//   console.log(`${key}: ${fixturesUnique[key]}`);
-// }
+/* 
+  This function here takes the data you fetch above
+  And add's it to the DOM <3 
+*/
 
-// pastResults.map(num => {
+function displayHTML(data) {
+  let fixturesUnique = data.reduce(function (r, a) {
+    r[a.Sport] = r[a.Sport] || [];
+    r[a.Sport].push(a);
+    return r;
+  }, Object.create(null));
 
-//   const numsArray = num.winning_numbers.split(" ");
-//   numsArray.push(num.mega_ball);
-//   numsArray.push("x" + num.multiplier.split("")[1]);
-//   console.log(numsArray);
-
-//   // pastResultsBlock.append(`
-//   //   <div class="col-12">
-//   //     <div class="animated flipInY past-result-item box-shadow">
-//   //       <div class="past-result-date">${moment(num.draw_date).format("MMM Do")}</div>
-//   //       <div class="past-result-numbers">
-//   //         ${numsArray.map(number => `<span>${number}</span>`)}
-//   //       </div>
-//   //     </div>
-//   //   </div>
-//   //   `)
-//   })
-
-let mega = document.getElementById("1");
-console.log(mega)
-
-console.log(fixturesUnique)
-Object.keys(fixturesUnique).forEach(function(key) {
-  fixturesUnique[key].map(item => {
-    console.log(item)
-    // const gameTime = item['Start time'];
-    const gameTime = item['Start time'].toString();
-    const gameHour = gameTime.slice(0,2);
-    const gameMin = gameTime.slice(2);
-    // console.log(`${gameHour}:${gameMin}`);
-    return  mega.insertAdjacentHTML("afterbegin", `<div class="fixture-mega-container"><div class="fixtures-block">
+  let mega = document.getElementById("1");
+  Object.keys(fixturesUnique).forEach(function (key) {
+    fixturesUnique[key].map(item => {
+      console.log(item)
+      // const gameTime = item['Start time'];
+      const gameTime = item['Start time'].toString();
+      const gameHour = gameTime.slice(0, 2);
+      const gameMin = gameTime.slice(2);
+      // console.log(`${gameHour}:${gameMin}`);
+      return mega.insertAdjacentHTML("afterbegin",
+        `<div class="fixture-mega-container"><div class="fixtures-block">
     <div class="team-1">
     <span>${item.Sport}</span>
       <span>NTU ${item['NTU Team']}</span>
@@ -82,9 +76,6 @@ Object.keys(fixturesUnique).forEach(function(key) {
   </div>
   </div>
 `)
-  })
-
-
-});
-
- // ${item['Venue/Location']}
+    })
+  });
+}
