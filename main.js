@@ -39,15 +39,37 @@ const sportJSON = myJSON;
 let mega = document.getElementById("1");
 console.log(mega)
 
+console.log(fixturesUnique)
 Object.keys(fixturesUnique).forEach(function(key) {
   fixturesUnique[key].map(item => {
-    return mega.innerHTML(`
-    <div class="col-12">
-      <div class="animated flipInY past-result-item box-shadow">
-        <div class="past-result-numbers">
-        </div>
-      </div>
+    console.log(item)
+    // const gameTime = item['Start time'];
+    const gameTime = item['Start time'].toString();
+    const gameHour = gameTime.slice(0,2);
+    const gameMin = gameTime.slice(2);
+    // console.log(`${gameHour}:${gameMin}`);
+    return  mega.insertAdjacentHTML("afterbegin", `<div class="fixtures-block">
+    <div class="team-1">
+    <span>${item.Sport}</span>
+      <span>NTU ${item['NTU Team']}</span>
     </div>
-    `)
+    <div class="time-block">
+    ${gameHour}:${gameMin}
+    </div>
+    <div class="team-2">
+    <span>${item['Opposition Team']}</span>
+    </div>
+    <div class="fixture-location">
+    <img src="./football-ticket.png"/>
+      <span>
+     
+      </span>
+    </div>
+  </div>
+`)
   })
+
+
 });
+
+ // ${item['Venue/Location']}
