@@ -15,8 +15,8 @@
         padding: 2rem 0 5.2rem;
       }
 
-      .icn.stadium-b {  
-        background-image: url('./football-ticket.png');
+      .icn.stadium-b {
+        background-image: url("./football-ticket.png");
       }
       .fixtures-container-bg h1 {
         color: #ffffff !important;
@@ -30,22 +30,19 @@
         font-size: 1.3rem;
         border: 1px solid #efefef;
         margin: 0 2rem;
-        padding: 1rem;
+        padding: 0.5rem;
         text-align: center;
       }
       .fixtures-list-container {
       }
 
       .fixture-location {
-        position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+        text-align: center;
+        border-bottom: 1px solid #efefef;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
       }
       .fixtures-block {
-        border-bottom: 1px solid #efefef;
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
         justify-content: center;
@@ -67,17 +64,18 @@
       <h1>Fixtures</h1>
     </div>
     <div class="fixtures-list-container" id="1">
-      <div class="fixtures-block">
-        <div class="team-1">
-          <span>NTU Team</span>
+      <!-- <div class="fixture-mega-container">
+        <div class="fixtures-block">
+          <div class="team-1">
+            <span>NTU Team</span>
+          </div>
+          <div class="time-block">12:30</div>
+          <div class="team-1">Leicester Women's 1</div>
         </div>
-        <div class="time-block">12:30</div>
-        <div class="team-1">Leicester Women's 1</div>
-      </div>
-       <div>
-        <img src="./football-ticket.png"/>
-       </div>
-      
+        <div>
+          <img src="./football-ticket.png"/>
+        </div>
+      </div> -->
     </div>
     <script type="module" src="main.js"></script>
   </body>

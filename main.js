@@ -48,7 +48,7 @@ Object.keys(fixturesUnique).forEach(function(key) {
     const gameHour = gameTime.slice(0,2);
     const gameMin = gameTime.slice(2);
     // console.log(`${gameHour}:${gameMin}`);
-    return  mega.insertAdjacentHTML("afterbegin", `<div class="fixtures-block">
+    return  mega.insertAdjacentHTML("afterbegin", `<div class="fixture-mega-container"><div class="fixtures-block">
     <div class="team-1">
     <span>${item.Sport}</span>
       <span>NTU ${item['NTU Team']}</span>
@@ -59,12 +59,27 @@ Object.keys(fixturesUnique).forEach(function(key) {
     <div class="team-2">
     <span>${item['Opposition Team']}</span>
     </div>
-    <div class="fixture-location">
-    <img src="./football-ticket.png"/>
-      <span>
-     
-      </span>
     </div>
+    <div class="fixture-location">
+    <div class="bucs__sport">
+    <img src="./cali.png"/>
+    <p class="games-venue">
+      ${item.Date}
+    </p>
+    </div>
+    <div class="bucs__venue">
+    <img src="./iconn.png"/>
+    <p class="games-venue">
+      ${item['Venue/Location']}
+    </p>
+    </div>
+    <div class="bucs__sport">
+    <img src="./tick.png"/>
+    <p class="games-venue">
+      ${item.Sport}
+    </p>
+    </div>
+  </div>
   </div>
 `)
   })
