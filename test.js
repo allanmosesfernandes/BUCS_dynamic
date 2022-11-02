@@ -1,6 +1,5 @@
 // api url
 const api_url = "https://api.npoint.io/bc128648bc9d512ac3c2";
-  
 // Defining async function
 async function getapi(url) {
     

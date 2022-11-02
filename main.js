@@ -11,14 +11,14 @@ const API_URL = "https://api.npoint.io/bc128648bc9d512ac3c2";
 
 async function getApiData(url) {
   const apiResponse = await fetch(url);
-/*   
-  Storing JSON data 
-*/
+  /*   
+    Storing JSON data 
+  */
   var data = await apiResponse.json();
   displayHTML(data);
 }
 
-getApiData(API_URL);//calling the async function
+getApiData(API_URL); //calling the async function
 
 /* 
   This function here takes the data you fetch above
@@ -44,7 +44,6 @@ function displayHTML(data) {
       return mega.insertAdjacentHTML("afterbegin",
         `<div class="fixture-mega-container"><div class="fixtures-block">
     <div class="team-1">
-    <span>${item.Sport}</span>
       <span>NTU ${item['NTU Team']}</span>
     </div>
     <div class="time-block">
@@ -56,19 +55,19 @@ function displayHTML(data) {
     </div>
     <div class="fixture-location">
     <div class="bucs__sport">
-    <img src="./cali.png"/>
+    <img src="https://nusdigital.s3.amazonaws.com/image/images/478217/original/cali.png"/>
     <p class="games-venue">
       ${item.Date}
     </p>
     </div>
     <div class="bucs__venue">
-    <img src="./iconn.png"/>
+    <img src="https://nusdigital.s3.amazonaws.com/image/images/478216/original/iconn.png"/>
     <p class="games-venue">
       ${item['Venue/Location']}
     </p>
     </div>
     <div class="bucs__sport">
-    <img src="./tick.png"/>
+    <img src="https://nusdigital.s3.amazonaws.com/image/images/478218/original/tick.png"/>
     <p class="games-venue">
       ${item.Sport}
     </p>
