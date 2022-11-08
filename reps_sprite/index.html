@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REPS</title>
+    <style>
+      .exec-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+      .exec__block--img {
+        height: 300px;
+        border-radius: 50%;
+        padding: 10px;
+        width: 300px;
+        background-image: url("https://nusdigital.s3.amazonaws.com/image/images/479792/original/sprite.png");
+      }
+      .exec__block {
+        display: flex;
+        flex-direction: column;
+      }
+      .exec__block--img.vp__anna {
+        background-position: -34px -25px;
+        border: 5px solid #ff8f39;
+      }
+      .exec__block--img.vp__ben {
+        background-position: -349px -24px;
+        border: 5px solid #f5d420;
+      }
+      .exec__block--img.vp__kallum {
+        background-position: -349px -350px;
+        border: 5px solid #9cc64f;
+      }
+      .exec__block--img.vp__rosie {
+        background-position: -687px -24px;
+        border: 5px solid #ab67a1;
+      }
+      .exec__block--img.vp__zahra {
+        background-position: -1018px -27px;
+        border: 5px solid #21aaaa;
+      }
+      .exec__block--img.vp__jodi {
+        background-position: -35px -349px;
+        border: 5px solid #fd3e91;
+      }
+      .exec__block--img.vp__brack {
+        background-position: -687px -350px;
+        border: 5px solid #ff4559;
+      }
+
+      .exec__block > .exec__links {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+      @media only screen and (max-width: 768px) {
+        .exec-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+      }
+}
+    </style>
+  </head>
+  <body>
+    <div class="exec-container">
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/president" class="exec__links">
+          <div class="exec__block--img vp__ben"></div>
+          <div class="exec__block--details">
+            <h3>Benedict Wills</h3>
+            <p><strong>President</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/vp-education" class="exec__links">
+          <div class="exec__block--img vp__kallum"></div>
+          <div class="exec__block--details">
+            <h3>Kallum Hancox</h3>
+            <p><strong>VP Education</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/vp-opportunities" class="exec__links">
+          <div class="exec__block--img vp__rosie"></div>
+          <div class="exec__block--details">
+            <h3>Rosie Bailey</h3>
+            <p><strong>VP Opportunities</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/vp-community-welfare" class="exec__links">
+          <div class="exec__block--img vp__zahra"></div>
+          <div class="exec__block--details">
+            <h3>Zahra Saley</h3>
+            <p><strong>VP Community & Welfare</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/vp-sport" class="exec__links">
+          <div class="exec__block--img vp__jodi"></div>
+          <div class="exec__block--details">
+            <h3>Jodi Stephens</h3>
+            <p><strong>VP Sport</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps/vp-postgraduate" class="exec__links">
+          <div class="exec__block--img vp__anna"></div>
+          <div class="exec__block--details">
+            <h3>Anna O'Hara</h3>
+            <p><strong>VP Postgraduate</strong></p>
+          </div>
+        </a>
+      </div>
+      <div class="exec__block">
+        <a href="/student-voice/your-reps#content-center" class="exec__links">
+          <div class="exec__block--img vp__brack"></div>
+          <div class="exec__block--details">
+            <h3>Margaux Butler</h3>
+            <p><strong>Brackenhurst Officer</strong></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
