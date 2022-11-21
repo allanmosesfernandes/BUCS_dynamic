@@ -3,7 +3,7 @@
   Update this every week with new fixtures!
 */
 
-const API_URL = "https://api.npoint.io/bc128648bc9d512ac3c2";
+const API_URL = "https://api.npoint.io/8f9061e79eabc54982cd";
 
 /* 
   Define asyn function for fetching API Data
@@ -15,6 +15,7 @@ async function getApiData(url) {
     Storing JSON data 
   */
   var data = await apiResponse.json();
+  
   displayHTML(data);
 }
 
@@ -26,7 +27,8 @@ getApiData(API_URL); //calling the async function
 */
 
 function displayHTML(data) {
-  let fixturesUnique = data.reduce(function (r, a) {
+  let reverseArray = data.reverse();
+  let fixturesUnique = reverseArray.reduce(function (r, a) {
     r[a.Sport] = r[a.Sport] || [];
     r[a.Sport].push(a);
     return r;
