@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="su.css">
+    <style>
+        .sus-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .sus-block img {
+            max-width: 100%;
+        }
+
+        .sus-block {
+            display: block;
+            position: relative;
+            max-width: 300px;
+            text-decoration: none;
+        }
+
+        .sus-page-link {
+            position: absolute;
+            bottom: 15px;
+            background: white;
+            z-index: 99;
+            left: 10px;
+            display: block;
+            padding: 1rem;
+        }
+
+        .sus-page-link a {
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sus-container">
+        <div class="sus-block">
+            <img src="https://nusdigital.s3.amazonaws.com/image/images/486563/original/sustsain-03.jpg"
+                alt="what we are doing">
+            <div class="sus-page-link">
+                <a href="https://www.trentstudents.org/about-us/sustainability/what-we-are-doing">
+                    <span class="custom-title">What we're doing</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sus-block">
+            <img src="https://nusdigital.s3.amazonaws.com/page/images/219982/original/CITY_CAMPUS_TILE.jpg"
+                alt="Student Pledges">
+            <div class="sus-page-link">
+                <a href="https://nusdigital.s3.amazonaws.com/image/images/486565/original/sustsain-01.jpg">
+                    <span class="custom-title">Student pledges</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sus-block">
+            <img src="https://nusdigital.s3.amazonaws.com/page/images/219982/original/CITY_CAMPUS_TILE.jpg"
+                alt="What you can do">
+            <div class="sus-page-link">
+                <a href="https://nusdigital.s3.amazonaws.com/image/images/486566/original/sustsain-02.jpg">
+                    <span class="custom-title">What you can do</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
