@@ -10,7 +10,7 @@
     <style>
         .sus-container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
 
@@ -23,6 +23,7 @@
             position: relative;
             max-width: 300px;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .sus-page-link {
@@ -38,41 +39,83 @@
         .sus-page-link a {
             text-decoration: none !important;
         }
+
+        @media only screen and (max-width: 600px) {
+            .sus-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+
+    <h2>Sustainability at NTSU</h2>
+
+    <h2>Sustainability is more than just a word. There's a sustainability dimension to everything we do (as individuals
+        and
+        as an organisation).</h2>
+
+    <p><strong>At its core, sustainability refers to the societal goal for people and nature to safely coexist on earth
+            for
+            as long as possible.</strong></p>
+
+    <p>The United Nations have developed a set of <u><a href="https://sdgs.un.org/goals">17 Sustainable Development
+                Goals</a></u> to help guide sustainable practices worldwide. <u><a
+                href="https://www.trentstudents.org/about-us/our-mission">NTSU's 2025 Strategy</a></u> holds our
+        sustainable
+        progress accountable according to these goals.</p>
+
+    <p>This section of our website shows what NTSU is doing to meet its sustainability objectives and provides
+        information
+        on what you can do as an individual to lower your carbo footprint and live a more sustainable lifestyle. Use the
+        buttons below to learn more</p>
+
+    <p>&nbsp;</p>
     <div class="sus-container">
+
         <div class="sus-block">
-            <img src="https://nusdigital.s3.amazonaws.com/image/images/486563/original/sustsain-03.jpg"
-                alt="what we are doing">
-            <div class="sus-page-link">
-                <a href="https://www.trentstudents.org/about-us/sustainability/what-we-are-doing">
-                    <span class="custom-title">What we're doing</span>
-                </a>
-            </div>
+            <a href="https://www.trentstudents.org/about-us/sustainability/what-we-are-doing">
+            <img src="https://nusdigital.s3.amazonaws.com/image/images/486563/original/sustsain-03.jpg" alt="what we are doing">
+                <div class="sus-page-link">
+                    <a href="https://www.trentstudents.org/about-us/sustainability/what-we-are-doing">
+                        <span class="custom-title">What we're doing</span>
+                    </a>
+                </div>
+            </a>
         </div>
 
         <div class="sus-block">
-            <img src="https://nusdigital.s3.amazonaws.com/page/images/219982/original/CITY_CAMPUS_TILE.jpg"
-                alt="Student Pledges">
+            <a href="https://www.trentstudents.org/about-us/sustainability/student-pledges">
+            <img src="https://nusdigital.s3.amazonaws.com/image/images/486565/original/sustsain-01.jpg" alt="Student Pledges">
             <div class="sus-page-link">
-                <a href="https://nusdigital.s3.amazonaws.com/image/images/486565/original/sustsain-01.jpg">
+                <a href="https://www.trentstudents.org/about-us/sustainability/student-pledges">
                     <span class="custom-title">Student pledges</span>
                 </a>
             </div>
+            </a>
+
         </div>
 
         <div class="sus-block">
-            <img src="https://nusdigital.s3.amazonaws.com/page/images/219982/original/CITY_CAMPUS_TILE.jpg"
-                alt="What you can do">
+            <a href="https://www.trentstudents.org/about-us/sustainability/what-you-can-do">
+            <img src="https://nusdigital.s3.amazonaws.com/image/images/486566/original/sustsain-02.jpg" alt="What you can do">
             <div class="sus-page-link">
-                <a href="https://nusdigital.s3.amazonaws.com/image/images/486566/original/sustsain-02.jpg">
+                <a href="https://www.trentstudents.org/about-us/sustainability/what-you-can-do">
                     <span class="custom-title">What you can do</span>
                 </a>
             </div>
+            </a>
         </div>
     </div>
+
+
+
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+
 </body>
 
 </html>
