@@ -3,28 +3,514 @@
   Update this every week with new fixtures!
 */
 
-const API_URL = "https://api.npoint.io/8f9061e79eabc54982cd";
+// const API_URL = "https://api.npoint.io/8f9061e79eabc54982cd";
 
 /* 
   Define asyn function for fetching API Data
 */
 
-async function getApiData(url) {
-  const apiResponse = await fetch(url);
-  /*   
-    Storing JSON data 
-  */
-  var data = await apiResponse.json();
+// async function getApiData(url) {
+//   const apiResponse = await fetch(url);
+//   /*   
+//     Storing JSON data 
+//   */
+//   var data = await apiResponse.json();
   
-  displayHTML(data);
-}
+//   displayHTML(data);
+// }
 
-getApiData(API_URL); //calling the async function
+// getApiData(API_URL); //calling the async function
 
 /* 
   This function here takes the data you fetch above
   And add's it to the DOM <3 
 */
+
+/* 
+
+    Had to manually add the JSON because the service 
+    kept going down :( 
+  
+*/
+const data = [
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Badminton",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "Loughborough Men's 3",
+    "H/A": "H",
+    "L/C": "TR",
+    "Venue/Location": "LWSC SH A",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Basketball",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Cambridge Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC SH A",
+    "Changing rooms": "",
+    "Start time": 2000
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Basketball",
+    "NTU Team": "M3",
+    "": "v",
+    "Opposition Team": "Leicester Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC SH A",
+    "Changing rooms": "",
+    "Start time": 1800
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Fencing",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "NTU M2",
+    "H/A": "H",
+    "L/C": "CC",
+    "Venue/Location": "LWSC SH 2",
+    "Changing rooms": "",
+    "Start time": 1800
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Fencing",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "NTU M1",
+    "H/A": "H",
+    "L/C": "CC",
+    "Venue/Location": "LWSC SH 2",
+    "Changing rooms": "",
+    "Start time": 1800
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Football",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "Nottingham Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (3G)",
+    "Changing rooms": "",
+    "Start time": 1530
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Football",
+    "NTU Team": "W1",
+    "": "v",
+    "Opposition Team": "Edinburgh Women's 2",
+    "H/A": "H",
+    "L/C": "TR",
+    "Venue/Location": "Clifton Campus (Grass pitch 4)",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Football",
+    "NTU Team": "W3",
+    "": "v",
+    "Opposition Team": "Oxford Women's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Gresham Sport Park 3G, Gresham Park Rd, West Bridgford, Nottingham NG2 7YF",
+    "Changing rooms": "",
+    "Start time": 1430
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Golf",
+    "NTU Team": "Mixed 1",
+    "": "v",
+    "Opposition Team": "Birmingham Mixed 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Ruddington Grange Golf Club, Wilford Rd, Ruddington, Nottingham NG11 6NB",
+    "Changing rooms": "",
+    "Start time": 1130
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Golf",
+    "NTU Team": "Mixed 2",
+    "": "v",
+    "Opposition Team": "Birmingham Mixed 4",
+    "H/A": "H",
+    "L/C": "CC",
+    "Venue/Location": "Ruddington Grange Golf Club, Wilford Rd, Ruddington, Nottingham NG11 6NB",
+    "Changing rooms": "",
+    "Start time": 1100
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Hockey",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "Durham Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Hockey Pitch)",
+    "Changing rooms": "",
+    "Start time": 1445
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Hockey",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Durham Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Hockey Pitch)",
+    "Changing rooms": "",
+    "Start time": 1630
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Hockey",
+    "NTU Team": "M3",
+    "": "v",
+    "Opposition Team": "Liverpool Men's 1",
+    "H/A": "H",
+    "L/C": "TR",
+    "Venue/Location": "Clifton Campus (Hockey Pitch)",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Hockey",
+    "NTU Team": "W1",
+    "": "v",
+    "Opposition Team": "Durham Women's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Hockey Pitch)",
+    "Changing rooms": "",
+    "Start time": 1815
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Hockey",
+    "NTU Team": "W3",
+    "": "v",
+    "Opposition Team": "Oxford Brookes Women's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Hockey Pitch)",
+    "Changing rooms": "",
+    "Start time": 2000
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Lacrosse",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Leicester Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (3G)",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Netball",
+    "NTU Team": "W4",
+    "": "v",
+    "Opposition Team": "Worcester Women's 3",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC SH B",
+    "Changing rooms": "",
+    "Start time": 1930
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Rugby League",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "St Mary's Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Grass pitch 5)",
+    "Changing rooms": "",
+    "Start time": 1400
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Rugby Union",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "Durham Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Nottingham Rugby Football Club, 1 Holme Rd, West Bridgford, Nottingham NG2 5AA",
+    "Changing rooms": "",
+    "Start time": 1400
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Rugby Union",
+    "NTU Team": "M3",
+    "": "v",
+    "Opposition Team": "East Anglia Men's 1",
+    "H/A": "H",
+    "L/C": "CC",
+    "Venue/Location": "Clifton Campus (Grass pitch 1)",
+    "Changing rooms": "",
+    "Start time": 1400
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Rugby Union",
+    "NTU Team": "M5",
+    "": "v",
+    "Opposition Team": "Loughborough Men's 5",
+    "H/A": "H",
+    "L/C": "CT",
+    "Venue/Location": "",
+    "Changing rooms": "",
+    "Start time": 1400
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Rugby Union",
+    "NTU Team": "W2",
+    "": "v",
+    "Opposition Team": "Lincoln Women's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Grass pitch 1)",
+    "Changing rooms": "",
+    "Start time": 1400
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Squash",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Nottingham Men's 5",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC Squash Courts",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Squash",
+    "NTU Team": "M3",
+    "": "v",
+    "Opposition Team": "Derby Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC Squash Courts",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Squash",
+    "NTU Team": "M4",
+    "": "v",
+    "Opposition Team": "Loughborough Men's 4",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC Squash Courts",
+    "Changing rooms": "",
+    "Start time": 1600
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Squash",
+    "NTU Team": "W1",
+    "": "v",
+    "Opposition Team": "Birmingham Women's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC Squash Courts",
+    "Changing rooms": "",
+    "Start time": 1600
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Table Tennis",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Swansea Men's 3",
+    "H/A": "H",
+    "L/C": "TR",
+    "Venue/Location": "LWSC SH 2",
+    "Changing rooms": "",
+    "Start time": 1330
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Table Tennis",
+    "NTU Team": "W2",
+    "": "v",
+    "Opposition Team": "Nottingham Women's 2",
+    "H/A": "H",
+    "L/C": "TR",
+    "Venue/Location": "LWSC SH 2",
+    "Changing rooms": "",
+    "Start time": 1330
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Tennis",
+    "NTU Team": "M1",
+    "": "v",
+    "Opposition Team": "Nottingham Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Tennis Centre)",
+    "Changing rooms": "",
+    "Start time": "09:00"
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Tennis",
+    "NTU Team": "M3",
+    "": "v",
+    "Opposition Team": "Warwick Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Tennis Centre)",
+    "Changing rooms": "",
+    "Start time": 1500
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Tennis",
+    "NTU Team": "M4",
+    "": "v",
+    "Opposition Team": "East Anglia Men's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Tennis Centre)",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Tennis",
+    "NTU Team": "M6",
+    "": "v",
+    "Opposition Team": "Loughborough Men's 5",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "Clifton Campus (Tennis Centre)",
+    "Changing rooms": "",
+    "Start time": 1900
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Volleyball",
+    "NTU Team": "M2",
+    "": "v",
+    "Opposition Team": "Northampton Men's 1",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC SH B",
+    "Changing rooms": "",
+    "Start time": 1300
+  },
+  {
+    "Week": 18,
+    "Date": "01/02/2023",
+    "Day": "Wed",
+    "Sport": "Volleyball",
+    "NTU Team": "W2",
+    "": "v",
+    "Opposition Team": "Cambridge Women's 2",
+    "H/A": "H",
+    "L/C": "L",
+    "Venue/Location": "LWSC SH B",
+    "Changing rooms": "",
+    "Start time": 1600
+  }
+]
+
 
 function displayHTML(data) {
   let reverseArray = data.reverse();
@@ -80,3 +566,5 @@ function displayHTML(data) {
     })
   });
 }
+
+displayHTML(data)
