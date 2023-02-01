@@ -523,7 +523,6 @@ function displayHTML(data) {
   let mega = document.getElementById("1");
   Object.keys(fixturesUnique).forEach(function (key) {
     fixturesUnique[key].map(item => {
-      console.log(item)
       // const gameTime = item['Start time'];
       const gameTime = item['Start time'].toString();
       const gameHour = gameTime.slice(0, 2);
