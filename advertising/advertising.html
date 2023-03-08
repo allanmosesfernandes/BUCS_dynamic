@@ -50,11 +50,44 @@
             gap: 2rem;
             transition: transform 0.3s ease;
         }
+.advertise-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+grid-template-rows: 100px 100px;
+  transition: transform 0.3s ease;
+}
 
-        .advertise-links-grid img:hover {
+
+.advertise-links-grid a {
+  background-color: #29235c !important;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+  
+}
+
+.advertise-links-grid a::after {
+  content: "↗";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.advertise-links-grid img:hover, a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+        .advertise-links-grid img:hover, a:hover {
             transform: scale(1.1);
             transition: transform 0.3s ease;
-
         }
 
         @media only screen and (max-width: 600px) {
@@ -103,7 +136,7 @@
     <p>Our advertising opportunities give you the chance to engage directly with our community of over 38,000 students.
         You
         can learn more about them and the marketing opportunities we offer below.</p>
-        <!-- <div class="button unionpurple"><a href="/resources/ntsu-media-pack/download_attachment">Media Pack</a></div>
+    <!-- <div class="button unionpurple"><a href="/resources/ntsu-media-pack/download_attachment">Media Pack</a></div>
         
         <div class="button unionpurple"><a href="https://machform.ntu.ac.uk/machform/view.php?id=607038">Make an Enquiry</a>
         </div>
@@ -114,22 +147,18 @@
         <div class="button unionpurple"><a href="/your-union/links/advertise-with-us/housing-fair">Housing Fair 2022</a></div> -->
     <div class="advertise-links-grid">
         <a href="/resources/ntsu-media-pack/download_attachment">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">
-        </a>
-        <a href="/resources/ntsu-media-pack/download_attachment">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">
-        </a>
-        <a href="/resources/ntsu-media-pack/download_attachment">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">
-        </a>
-        <a href="/resources/ntsu-media-pack/download_attachment">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">
-        </a>
+            Media Guide
 
+        </a>
+        <a href="https://machform.ntu.ac.uk/machform/view.php?id=607038">Make an Enquiry</a>
+
+        <a href="/about-us/advertise-with-us/freshers-media">Freshers 2023 Advertising</a>
+
+        <a href="/your-union/links/advertise-with-us/housing-fair">
+            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
+                alt="">Housing Fair 2023
+        </a>
+    
     </div>
 </body>
 
