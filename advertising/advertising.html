@@ -50,43 +50,59 @@
             gap: 2rem;
             transition: transform 0.3s ease;
         }
-.advertise-links-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-grid-template-rows: 100px 100px;
-  transition: transform 0.3s ease;
-}
+
+        .advertise-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            /* grid-template-rows: 200px 200px; */
+            transition: transform 0.3s ease;
+        }
 
 
-.advertise-links-grid a {
-  background-color: #29235c !important;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  position: relative;
-  
-}
+        .advertise-links-grid a {
+            color: white;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            position: relative;
+            height: 185px;
+            border-radius: 10px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
 
-.advertise-links-grid a::after {
-  content: "↗";
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
+        }
 
-.advertise-links-grid img:hover, a:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
+        .advertise-links-grid a.media_guide {
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494441/original/media_pack_2023.png");
+        }
 
-        .advertise-links-grid img:hover, a:hover {
+        .advertise-links-grid a.housing_fair {
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494442/original/housing_fair_thumb.png");
+        }
+
+        .advertise-links-grid a.make_enquiry {
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494443/original/make_enquiry.png");
+        }
+
+        .advertise-links-grid a.freshers_2023 {
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494444/original/advt_2023.png");
+        }
+
+
+        .advertise-links-grid img:hover,
+        a:hover {
             transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .advertise-links-grid img:hover,
+        a:hover {
+            transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
@@ -146,19 +162,13 @@ grid-template-rows: 100px 100px;
         
         <div class="button unionpurple"><a href="/your-union/links/advertise-with-us/housing-fair">Housing Fair 2022</a></div> -->
     <div class="advertise-links-grid">
-        <a href="/resources/ntsu-media-pack/download_attachment">
-            Media Guide
+        <a href="/resources/ntsu-media-pack/download_attachment" class="media_guide"></a>
+        <a href="https://machform.ntu.ac.uk/machform/view.php?id=607038" class="make_enquiry"></a>
 
-        </a>
-        <a href="https://machform.ntu.ac.uk/machform/view.php?id=607038">Make an Enquiry</a>
+        <a href="/about-us/advertise-with-us/freshers-media" class="freshers_2023"></a>
 
-        <a href="/about-us/advertise-with-us/freshers-media">Freshers 2023 Advertising</a>
+        <a href="/your-union/links/advertise-with-us/housing-fair" class="housing_fair"></a>
 
-        <a href="/your-union/links/advertise-with-us/housing-fair">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">Housing Fair 2023
-        </a>
-    
     </div>
 </body>
 

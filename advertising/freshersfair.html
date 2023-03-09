@@ -61,25 +61,29 @@
 
 
         .advertise-links-grid a {
-            background-color: #29235c !important;
             color: white;
             font-weight: bold;
-            border-radius: 10px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             font-size: 1.2rem;
             position: relative;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
         }
 
-        .advertise-links-grid a::after {
-            content: "↗";
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
+        .advertise-links-grid a.media_guide{
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494441/original/media_pack_2023.png");
+    }
+        .advertise-links-grid a.media_guide{
+            background-image: url("https://nusdigital.s3.amazonaws.com/image/images/494442/original/housing_fair_thumb.png");
+    }
+
 
         .advertise-links-grid img:hover,
         a:hover {
@@ -151,18 +155,12 @@
         
         <div class="button unionpurple"><a href="/your-union/links/advertise-with-us/housing-fair">Housing Fair 2022</a></div> -->
     <div class="advertise-links-grid">
-        <a href="/resources/ntsu-media-pack/download_attachment">
-            Media Guide
+        <a href="/resources/ntsu-media-pack/download_attachment" class="media_guide"></a>
+        <a href="https://machform.ntu.ac.uk/machform/view.php?id=607038" class="make_enquiry">Make an Enquiry</a>
 
-        </a>
-        <a href="https://machform.ntu.ac.uk/machform/view.php?id=607038">Make an Enquiry</a>
+        <a href="/about-us/advertise-with-us/freshers-media" class="book_stall">Book a stall</a>
 
-        <a href="/about-us/advertise-with-us/freshers-media">Book a stall</a>
-
-        <a href="/your-union/links/advertise-with-us/housing-fair">
-            <img src="https://53dbbad255731df0b687-0b0f27d0bc35e37990e5d06a3476393e.ssl.cf3.rackcdn.com/web_banner_button-media_guide.jpg"
-                alt="">Freshers Fair Stall
-        </a>
+        <a href="/your-union/links/advertise-with-us/housing-fair" class="freshers_fair">Freshers Fair Stall</a>
 
     </div>
 </body>
