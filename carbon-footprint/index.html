@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+        <style>
+            #myChart {
+                width: 500px !important;
+                height: 500px !important;
+            }
+        </style>
+</head>
+
+<body>
+    <h2>NTSU Carbon Footprint </h2>
+    <canvas id="myChart"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Supply chain', 'Waste', 'Energy', 'Scopes 1+2', 'Partner Accomodation'],
+                datasets: [{
+                    data: [50, 4, 11, 3, 32],
+                    backgroundColor: [
+                        '#a05195',
+                        '#ff7c43',
+                        '#003f5c',
+                        '#d45087',
+                        '#ffa600'
+                    ]
+                }]
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        formatter: function (value, context) {
+                            return value + '%';
+                        },
+                        font: {
+                            weight: 'bold',
+                            size: '18'
+                        },
+                        color: '#ffffff',
+                        backgroundColor: function (context) {
+                            return context.dataset.backgroundColor;
+                        }
+                    }
+                }
+            },
+            plugins: [ChartDataLabels]
+        });
+
+    </script>
+</body>
+
+</html>
