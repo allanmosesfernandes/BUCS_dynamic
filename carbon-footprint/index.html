@@ -10,24 +10,26 @@
     <script
         src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
-        <style>
-            #myChart {
-                width: 500px !important;
-                height: 500px !important;
-            }
-        </style>
+    <style>
+        .chart-container {
+            max-width: 500px !important;
+            max-height: 500px !important;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>NTSU Carbon Footprint </h2>
-    <canvas id="myChart"></canvas>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
 
     <script>
+
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Supply chain', 'Waste', 'Energy', 'Scopes 1+2', 'Partner Accomodation'],
+                labels: ['Supply chain', 'Waste', 'WTT and Distribution', 'Scopes 1+2', 'Partner Accomodation'],
                 datasets: [{
                     data: [50, 4, 11, 3, 32],
                     backgroundColor: [
@@ -40,7 +42,12 @@
                 }]
             },
             options: {
+                maintainAspectRatio: false,
                 plugins: {
+                    title: {
+                    display: true,
+                    text: 'NTSU Carbon Footprint 2021-22'
+                    },
                     datalabels: {
                         formatter: function (value, context) {
                             return value + '%';
