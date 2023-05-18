@@ -12,8 +12,8 @@
 
     <style>
         .chart-container {
-            max-width: 500px !important;
-            max-height: 500px !important;
+            max-width: 800px !important;
+            max-height: 800px !important;
         }
     </style>
 </head>
@@ -29,9 +29,9 @@
         var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Supply chain', 'Waste', 'WTT and Distribution', 'Scopes 1+2', 'Partner Accomodation'],
+                labels: ['Scopes 1+2','Business travel', 'Hotel stays', 'Staff commuting', 'Supply chain', 'Upstream leased assets','Waste','Water','Working Elsewhere','WTT & Distribution'],
                 datasets: [{
-                    data: [50, 4, 11, 3, 32],
+                    data: [2.8, 0.5, 0.1, 4.2, 47.4,30.0,4.1,0,0.4,10.6],
                     backgroundColor: [
                         '#a05195',
                         '#ff7c43',
